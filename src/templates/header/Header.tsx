@@ -1,18 +1,29 @@
 import React from 'react';
 import './header.scss';
-import { IonHeader, IonIcon, IonToolbar } from '@ionic/react';
+import { IonHeader, IonIcon, IonButton, IonToolbar, IonMenuButton } from '@ionic/react';
+import { menuController } from '@ionic/core';
 import { briefcaseOutline, expandOutline, informationCircleOutline, personCircleOutline } from 'ionicons/icons';
 
-const Header:React.FC = () => {
+interface Props{
+    name: string,
+}
+
+const Header:React.FC<Props> = ({name}:Props) => {
+    const openMenu = async() =>{
+        await menuController.open('side-menu');
+    }
+
     return (
-        <IonHeader>
+        <IonHeader id='app'>
             <IonToolbar>
                 <div className='header'>
-                    <IonIcon 
-                    slot='icon-only' 
-                    icon={expandOutline}
-                    className='gray-element'
-                    ></IonIcon>
+                    <IonMenuButton />
+                    {/*<IonButton onClick={openMenu} fill='clear'>
+                        <IonIcon 
+                        slot='icon-only' 
+                        icon={expandOutline}
+                        className='gray-element' />
+                    </IonButton>*/}
 
                     <div className='user-data'>
                         <div className='products-display'>
@@ -23,28 +34,27 @@ const Header:React.FC = () => {
                             <IonIcon 
                             slot='icon-only' 
                             icon={briefcaseOutline}
-                            className='gray-element'
-                            ></IonIcon>
+                            className='gray-element' />
                         </div>
 
-                        <div className='content'>
+                        <div className='content spacing-text'>
                             <IonIcon 
                             slot='icon-only' 
-                            icon={informationCircleOutline}
-                            className='gray-element'
-                            ></IonIcon>
+                            icon={informationCircleOutline} 
+                            className='gray-element' />
 
-                            <p className='gray-text'>Atualizações</p>
+                            <p className='gray-element'>
+                                Atualizações
+                            </p>
                         </div>
 
                         <div className='content'>
                             <IonIcon 
                             slot='icon-only' 
                             icon={personCircleOutline} 
-                            size='large'
-                            ></IonIcon>
+                            size='large' />
 
-                            <p>JULY BEATRIZ</p>
+                            <p>{name}</p>
                         </div>
                     </div>
                 </div>

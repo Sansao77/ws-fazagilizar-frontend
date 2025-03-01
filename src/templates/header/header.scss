@@ -10,24 +10,37 @@ ion-icon{
     display: flex;
     padding: 0.2rem 0.5rem;
     background-color: white;
-    color: black;
     justify-content: space-between;
+    color: black;
     align-items: center;
+
+    @media (min-width: 1000px){
+        justify-content: space-between;
+    }
 }
 
 .user-data{
     display: flex; 
-    justify-content: space-around; 
+    justify-content: space-around;
     align-items: center;
-    width: 25%;
+    gap: 0.4rem;
+
+    *{
+        margin: 0 0.22rem;
+    }
 
     .content{
         display: flex;
         align-items: center;
-        gap: 0.2rem;
+        justify-content: space-evenly;
 
-        .gray-text{
-            color: #00000080;
+        &.spacing-text{
+            padding: 0 0.2rem;
+        }
+
+        @media(max-width: 450px){
+            gap: 0.1rem;
+            font-size: small;
         }
     }
 
