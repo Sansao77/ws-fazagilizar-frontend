@@ -54,7 +54,7 @@ const Header:React.FC<Props> = ({name}:Props) => {
                             icon={personCircleOutline} 
                             size='large' />
 
-                            <p>{name}</p>
+                            <p className='upper-text'>{name}</p>
                         </div>
                     </div>
                 </div>

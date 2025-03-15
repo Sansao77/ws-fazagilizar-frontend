@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './sidebar.scss';
 import { allMenu } from './sidebar-content';
-import { IonContent, IonHeader, IonIcon, IonImg, IonMenu } from '@ionic/react';
+import { IonContent, IonHeader, IonIcon, IonMenu } from '@ionic/react';
 import { chevronUp,chevronDown } from 'ionicons/icons';
-import { IMenuItem } from '../../interfaces/sidebar';
+import { IMenuItem } from '../../../interfaces/sidebar';
 
 const Sidebar: React.FC = () => {
     const [sideContent, setSideContent] = useState(allMenu);
@@ -34,7 +34,8 @@ const Sidebar: React.FC = () => {
                     <div className='text-content'>
                         <span className='red-title'>EMPRESA ATUAL:</span>
                         <span className='enterprise-title'>SUPORTE 2025</span>
-                        <a href="" className='link'>ACESSAR LOJA</a>
+                        <a href="/tab1
+                        " className='link'>ACESSAR LOJA</a>
                     </div>
 
                     <span>NAVEGAÇÃO</span>

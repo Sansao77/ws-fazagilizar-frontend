@@ -1,0 +1,6 @@
+@use '/public/styles/styles.scss' as *;
+
+.align-middle{
+    @extend .align-center;
+    background-color: rgb(12, 147, 200);
+}
