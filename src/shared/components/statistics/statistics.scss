@@ -1,0 +1,25 @@
+@use '/public/styles/variables.scss' as *;
+
+.charts{
+    display: flex;
+    gap: 0.5rem;
+
+    .pie-chart-align{
+        display: flex;
+        flex-direction: column;
+        //gap: 0.2rem;
+        align-items: center;
+        color: $gray-black;
+        
+        >span{
+            font-size: x-large;
+        }
+    }
+}
+
+.divider{
+    display: inline-block;
+    width: 2px;
+    background-color: #D9D9D9;
+    height: auto;
+}

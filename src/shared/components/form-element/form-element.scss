@@ -1,0 +1,34 @@
+@use '/public/styles/variables.scss' as *;
+@use '/public/styles/styles.scss' as *;
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+
+    .type-pay{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .img-pay{
+            width: 3rem;
+            height: 3rem;
+        }
+
+        span{
+            color: black;
+            font-size: x-large;
+            font-weight: 600;
+            padding-top: 0.7rem;
+        }
+    }
+
+    .button-pay{
+        --color: white;
+        font-size: small;
+        font-weight: bolder;
+    }
+}

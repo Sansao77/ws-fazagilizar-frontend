@@ -8,7 +8,7 @@ interface Props{
     name: string,
 }
 
-const Header:React.FC<Props> = ({name}:Props) => {
+const Header:React.FC<Props> = ({name}:Props) => {  
     const openMenu = async() =>{
         await menuController.open('side-menu');
     }

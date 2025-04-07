@@ -1,9 +1,15 @@
 @use './variables.scss' as *;
 
 main{
-    padding: 4.5rem 1rem 0 1rem;
+    padding: 4.5rem 1rem 1rem 1rem;
     background-color: $background-gray;
-    height: 100vh;
+}
+
+.default-container{
+    padding: 0.8rem 0.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 5px $shadow-effect;
 }
 
 .upper-text{

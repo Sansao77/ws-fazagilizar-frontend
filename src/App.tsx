@@ -30,13 +30,13 @@ import '@ionic/react/css/display.css';
 /* import '@ionic/react/css/palettes/dark.always.css'; */
 /* import '@ionic/react/css/palettes/dark.class.css'; */
 import '@ionic/react/css/palettes/dark.system.css';
-import Home from './components/home/Home';
+import Home from './modules/components/home/Home';
 import './app.scss'
 
 setupIonicReact();
 
 const App: React.FC = () => (
-  <IonApp>
+  <IonApp className='app'>
     <IonReactRouter>
       <Home />
     </IonReactRouter>

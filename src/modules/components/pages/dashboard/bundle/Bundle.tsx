@@ -1,4 +1,4 @@
-import { IonCard, IonCardTitle } from "@ionic/react";
+import { IonCard, IonCardTitle, IonImg } from "@ionic/react";
 import SwiperCore from 'swiper';
 import {Swiper, SwiperSlide} from "swiper/react";
 import { Pagination, Autoplay } from 'swiper/modules';
@@ -13,7 +13,6 @@ const Bundle: React.FC = () =>{
             modules={[Pagination, Autoplay]}
             spaceBetween={10}
             slidesPerView={3}
-            //loop={true}
             autoplay={true}
             pagination={{ 
                 clickable: true,
@@ -22,42 +21,42 @@ const Bundle: React.FC = () =>{
             >
                 <SwiperSlide>
                     <IonCard color="primary">
-                        <img src="/img-teste.png" alt="teste" />
+                        <IonImg src="/img-teste.png" alt="teste" />
                         <IonCardTitle>Slide 1</IonCardTitle>
                     </IonCard>
                 </SwiperSlide>
 
                 <SwiperSlide>
                     <IonCard color="medium">
-                        <img src="/img-teste.png" alt="teste" />
+                        <IonImg src="/img-teste.png" alt="teste" />
                         <IonCardTitle>Slide 2</IonCardTitle>
                     </IonCard>
                 </SwiperSlide>
 
                 <SwiperSlide>
                     <IonCard color="secondary">
-                        <img src="/img-teste.png" alt="teste" />
+                        <IonImg src="/img-teste.png" alt="teste" />
                         <IonCardTitle>Slide 3</IonCardTitle>
                     </IonCard>
                 </SwiperSlide>
 
                 <SwiperSlide>
                     <IonCard color="tertiary">
-                        <img src="/img-teste.png" alt="teste" />
+                        <IonImg src="/img-teste.png" alt="teste" />
                         <IonCardTitle>Slide 4</IonCardTitle>
                     </IonCard>
                 </SwiperSlide>
 
                 <SwiperSlide>
                     <IonCard color="success">
-                        <img src="/img-teste.png" alt="teste" />
+                        <IonImg src="/img-teste.png" alt="teste" />
                         <IonCardTitle>Slide 5</IonCardTitle>
                     </IonCard>
                 </SwiperSlide>
 
                 <SwiperSlide>
                     <IonCard color="warning">
-                        <img src="/img-teste.png" alt="teste" />
+                        <IonImg src="/img-teste.png" alt="teste" />
                         <IonCardTitle>Slide 6</IonCardTitle>
                     </IonCard>
                 </SwiperSlide>
