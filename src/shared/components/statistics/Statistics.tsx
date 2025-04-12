@@ -4,8 +4,6 @@ import { dataset, valueFormatter } from "../../mock/stores-data"
 import './statistics.scss'
 
 const chartSetting = {
-    width: 650,
-    height: 300,
     sx: {
       [`.${axisClasses.left} .${axisClasses.label}`]: {
         transform: 'translate(-20px, 0)',
@@ -25,7 +23,7 @@ const colors = ['#20B9AE', '#3E70C9', '#A567E2', '#43B968'];
 const Statistics = () =>{
     return (
         <div className="charts">
-            <section>
+            <section style={{ height: "300px", width: "100%" }}>
                 <BarChart
                 colors={colors}
                 dataset={dataset}
@@ -47,11 +45,6 @@ const Statistics = () =>{
             <section className="pie-chart-align">
                 <PieChart
                 colors={colors}
-                width={450}
-                height={200}
-                slotProps={{ legend: { 
-                    
-                 } }}
                 series={[
                     {
                         highlightScope: {highlight: 'item', fade: 'global'},
@@ -62,7 +55,6 @@ const Statistics = () =>{
                         {id: 3, value: 30, label: 'LOJA FÍSICA 1'},
                         {id: 4, value: 40, label: 'LOJA FÍSICA 2'}
                         ],
-                        //arcLabel: getArcLabel,
                     }
                 ]}
                 sx={{

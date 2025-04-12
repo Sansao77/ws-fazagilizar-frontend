@@ -13,19 +13,32 @@ const SlideData: React.FC<Props> = ({data}) =>{
     return (
         <div className="default-container">
             <Swiper
-            modules={[Navigation]}
-            spaceBetween={10}
-            slidesPerView={5}
-            autoplay={true}
-            pagination={{ 
-                clickable: true,
-                el: '.swiper-custom-pagination'
+            breakpoints={{
+                // when window width is >= 640px
+                320: {
+                    slidesPerView: 1,
+                },
+                // when window width is >= 768px
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+                1280: {
+                    slidesPerView: 4,
+                }
             }}
+            modules={[Navigation]}
+            spaceBetween={60}
+            navigation
+            preventInteractionOnTransition
+            className="custom-swiper"
             >
                 {data.map((slide, index) =>(
-                    <SwiperSlide>
+                    <SwiperSlide key={slide.title}>
                         <div className="container-contant">
-                            <h1 className="index">{index}</h1>
+                            <h1 className="index">{index + 1}</h1>
 
                             <img src='/favicon.png' alt="ionic" />
 

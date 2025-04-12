@@ -36,3 +36,18 @@
         font-weight: bold;
     }
 }
+
+/* Define altura e padding do swiper */
+.custom-swiper {
+    padding: 0 60px; /* Isso já ajuda a dar espaço nas laterais */
+}
+  
+
+/* Afastar as setas para fora do slider */
+.swiper-button-prev {
+    left: 0; /* ou -20px se quiser mais afastado */
+}
+  
+  .swiper-button-next {
+    right: 0;
+}

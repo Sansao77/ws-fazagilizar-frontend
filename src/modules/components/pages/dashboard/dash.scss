@@ -103,4 +103,19 @@
     .sales{
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .form-grid{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+        row-gap: 0.75rem;
+    }
+
+    .container-grid{
+        display: flex!important;
+        flex-direction: column;
+    }
+
+    .sales{
+        grid-template-columns: repeat(1, 1fr)!important;
+    }
 }

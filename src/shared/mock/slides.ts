@@ -47,4 +47,8 @@ export const topClients:ISlides[] = [
         loja: 'Loja 1',
         pedidos: 183,
     },
+    {
+        title: 'Blusa manga ',
+        codigo: 336983,
+    },
 ] 

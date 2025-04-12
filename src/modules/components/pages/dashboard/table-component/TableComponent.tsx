@@ -45,7 +45,7 @@ const TableComponent: React.FC<Props> = ({data, type, width}) =>{
                 <TableBody>
                     {data.map((row) =>(
                         <TableRow
-                        key={row.codigo}
+                        key={row.vendedor}
                         sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
                             {(type === "pedidos")? (

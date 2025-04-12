@@ -10,9 +10,18 @@ const Bundle: React.FC = () =>{
     return (
         <div className="container">
             <Swiper
+            breakpoints={{
+                // when window width is >= 640px
+                640: {
+                    slidesPerView: 1,
+                },
+                // when window width is >= 768px
+                768: {
+                    slidesPerView: 3,
+                },
+            }}
             modules={[Pagination, Autoplay]}
             spaceBetween={10}
-            slidesPerView={3}
             autoplay={true}
             pagination={{ 
                 clickable: true,
