@@ -1,0 +1,27 @@
+@use '/public/styles/variables.scss' as *;
+
+.store-component{
+    display: flex;
+    gap: 0.4rem;
+    height: 2.7rem;
+    color: black;
+
+    .color-bar{
+        width: 0.35rem;
+        height: 100%;
+    }
+
+    .store-data{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 0.3rem;
+        color: $gray-black;
+
+        .name{
+            color: black;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+}

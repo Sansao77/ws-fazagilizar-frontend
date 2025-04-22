@@ -1,0 +1,7 @@
+@use '/public/styles/variables.scss' as *;
+
+.align-selects{
+    display: flex;
+    column-gap: 0.25rem;
+    color: $gray-black;
+}

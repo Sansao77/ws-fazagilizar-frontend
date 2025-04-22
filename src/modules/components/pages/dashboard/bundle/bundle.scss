@@ -1,0 +1,47 @@
+@use 'swiper/css' as *;
+@use 'swiper/css/pagination' as *;
+@use 'swiper/css/effect-fade' as  *;
+
+.swiper-container {
+    width: 100%;
+    height: 10px; // Ajuste a altura
+    margin: 0.5rem 0;
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-size: 1.5rem;
+        color: black;
+    }
+
+    // Estilos da paginação
+    .swiper-pagination-bullet {
+        margin: 1rem 0;
+        background-color: green;
+        opacity: 0.5;
+        width: 12px;
+        height: 12px;
+        margin: 0 8px !important;
+
+        &.swiper-pagination-bullet-active {
+        opacity: 1;
+        background-color: #0056b3;
+        }
+    }
+
+    // Estilos da navegação
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #007bff;
+        &:after {
+        font-size: 24px;
+        }
+    }
+}
+
+.container{
+    padding-bottom: 0.25rem;
+}

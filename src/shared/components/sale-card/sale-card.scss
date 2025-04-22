@@ -1,0 +1,40 @@
+@use '/public/styles/variables.scss' as *;
+@use '/public/styles/styles.scss' as *;
+
+.ion-card{
+    .header{
+        display: flex;
+        flex-direction: row;
+        padding: 0 0.5rem;
+        
+        .title{
+            color: black;
+            font-weight: bold;
+            font-size: medium;
+        }
+
+        .data-bagde{
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.25rem;
+            border-radius: 10rem;
+        }
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        padding: 0 0.25rem;
+
+        h1{
+            font-weight: bolder;
+            font-size: xx-large;
+            color: black;
+        }
+
+        .select-month{
+            color: $gray-black;
+        }
+    }
+}

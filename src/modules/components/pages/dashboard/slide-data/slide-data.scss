@@ -1,0 +1,53 @@
+@use '/public/styles/variables.scss' as *;
+@use 'swiper/css' as *;
+@use 'swiper/css/navigation' as *;
+
+.container-contant{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: $gray-black;
+
+    .text-contant{
+        display: flex;
+    }
+
+    .text-contant{
+        flex-direction: column;
+        font-size: small;
+        justify-content: center;
+
+        .title{
+            text-transform: uppercase;
+            font-weight: bold;
+            color: black;
+        }
+        
+        >a{
+            color: $gray-black;
+            cursor: pointer;
+            width: fit-content;
+            padding-top: 0.6rem;
+        }
+    }
+
+    .index{
+        font-size: xx-large;
+        font-weight: bold;
+    }
+}
+
+/* Define altura e padding do swiper */
+.custom-swiper {
+    padding: 0 60px; /* Isso já ajuda a dar espaço nas laterais */
+}
+  
+
+/* Afastar as setas para fora do slider */
+.swiper-button-prev {
+    left: 0; /* ou -20px se quiser mais afastado */
+}
+  
+  .swiper-button-next {
+    right: 0;
+}
