@@ -3,6 +3,10 @@
 main{
     padding: 4.5rem 1rem 1rem 1rem;
     background-color: $background-gray;
+    
+    >*{
+        padding: 0.5rem 0;
+    }
 }
 
 .default-container{
@@ -23,7 +27,7 @@ main{
 
 .align-center{
     display: flex;
-    height: 100vh;
+    height: 100dvh;
     align-items: center;
     justify-content: center;
 }
