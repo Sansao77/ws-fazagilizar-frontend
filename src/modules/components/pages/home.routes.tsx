@@ -1,12 +1,13 @@
 import { Route } from "react-router-dom";
-import { IonRouterOutlet } from "@ionic/react";
 import Dash from "./dashboard/Dash";
+import ProductManagerRoutes from "./product-manager/product-manager.routes";
 
 const HomeRoutes = () =>{
     return (
-        <IonRouterOutlet>
+        <>
             <Route exact path="/home/dash" component={Dash}/>
-        </IonRouterOutlet>
+            <ProductManagerRoutes />
+        </>
     )
 }
 

@@ -63,54 +63,7 @@ export const allMenu:IMenuItem[] = [
     {
         title: 'Gestor de Produtos',
         icon: fileTrayFullOutline,
-        children: [
-            {
-                title: 'Novo',
-                icon: addOutline,
-                route: '/404',
-            },
-            {
-                title: 'Ativos',
-                route: '/404',
-            },
-            {
-                title: 'Bloqueados',
-                route: '/404',
-            },
-            {
-                title: 'Inativos/Ocultos',
-                route: '/404',
-            },
-            {
-                title: 'Sem Estoque',
-                route: '/404',
-            },
-            {
-                title: 'Ações em Massa',
-                route: '/404',
-            },
-            {
-                title: 'Vitrine de Produtos',
-                route: '/404',
-            },
-            {
-                title: 'Tabela de Produtos',
-                children: [
-                    {
-                        title: 'Criar',
-                        route: '/404',
-                    },
-                    {
-                        title: 'Histórico',
-                        route: '/404',
-                    },
-                ]
-            },
-            {
-                title: 'Gerenciar PDF/Catálogo',
-                route: '/404',
-            },
-        ]
+        route: '/home/product-manager',
     },
     {
         title: 'Gestor de Pessoas',
