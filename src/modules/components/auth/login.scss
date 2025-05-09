@@ -1,5 +1,16 @@
 @use '/public/styles/styles.scss' as *;
 
+#forgot-password{
+    color: black;
+    font-size: small;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
 .background-login{
     display: flex;
     align-items: center;

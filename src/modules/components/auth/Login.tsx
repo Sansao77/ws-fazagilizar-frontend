@@ -1,4 +1,5 @@
 import { 
+    IonAlert,
     IonButton,
     IonContent, 
     IonIcon, 
@@ -47,10 +48,21 @@ const Login:React.FC = () =>{
                             </IonButton>
                         </form>
 
-                        <a href="">Esqueci minha senha</a>
+                        <a id="forgot-password">Esqueci minha senha</a>
                     </div>
                 </div>
             </IonContent>
+
+            <IonAlert
+            trigger="forgot-password"
+            header="Recuperar Senha"
+            buttons={['ENVIAR']}
+            inputs={[
+                {
+                    placeholder: 'Digite seu e-mail'
+                }
+            ]}
+            ></IonAlert>
         </IonPage>
     )
 };
