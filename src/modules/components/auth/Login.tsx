@@ -37,7 +37,7 @@ const Login:React.FC = () =>{
                                 <IonInputPasswordToggle slot="end" />
                             </IonInput>
 
-                            <ReCAPTCHA sitekey={import.meta.env.VITE_REACT_APP_SITE_KEY} />
+                            <ReCAPTCHA sitekey={import.meta.env.VITE_SITE_KEY} />
 
                             <IonButton 
                             expand="block"
