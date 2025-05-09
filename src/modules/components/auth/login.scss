@@ -1,0 +1,38 @@
+@use '/public/styles/styles.scss' as *;
+
+.background-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: #0443d9;
+}
+
+.login{
+    display: flex;
+    color: black;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    height: 75%;
+    gap: 2rem;
+
+    .logo{
+        width: 10rem;
+        height: 8rem;
+    }
+
+    .form-data{
+        width: 85%;
+        
+        >*{
+            margin: 0.5rem 0;
+        }
+
+        .enter{
+            --background-color: #113f7d;
+            color: white;
+        }
+    }
+}

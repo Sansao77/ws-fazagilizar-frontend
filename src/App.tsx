@@ -30,15 +30,15 @@ import '@ionic/react/css/display.css';
 /* import '@ionic/react/css/palettes/dark.always.css'; */
 /* import '@ionic/react/css/palettes/dark.class.css'; */
 import '@ionic/react/css/palettes/dark.system.css';
-import Home from './modules/components/home/Home';
 import './app.scss'
+import AppRoutes from './app.routes';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp className='app'>
     <IonReactRouter>
-      <Home />
+      <AppRoutes />
     </IonReactRouter>
   </IonApp>
 );

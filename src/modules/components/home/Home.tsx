@@ -1,7 +1,7 @@
 import { IonPage, IonRouterOutlet, IonTabs } from "@ionic/react"
 import Header from "../templates/header/Header"
 import Sidebar from "../templates/sidebar/Sidebar"
-import AppRoutes from "../../../app.routes"
+import HomeRoutes from "../pages/home.routes"
 
 const Home:React.FC = () =>{
     return (
@@ -9,11 +9,9 @@ const Home:React.FC = () =>{
             <Sidebar />
             <Header name="Julia Costa"/>
 
-            <IonTabs>
-                <IonRouterOutlet>
-                    <AppRoutes />
-                </IonRouterOutlet>
-            </IonTabs>
+            <IonRouterOutlet>
+                <HomeRoutes />
+            </IonRouterOutlet>
         </IonPage>
     )
 }
