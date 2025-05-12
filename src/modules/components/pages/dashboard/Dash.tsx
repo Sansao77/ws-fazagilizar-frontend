@@ -113,7 +113,7 @@ const Dash: React.FC = () =>{
 
                         <div className="form-grid">
                             {FormDataPayment.map(x =>(
-                                <FormElement key={x.title} title={x.title} imgSrc="/favicon.png"/>
+                                <FormElement key={x.title} title={x.title} imgSrc={x.img}/>
                             ))}
                         </div>
                     </section>
@@ -123,7 +123,7 @@ const Dash: React.FC = () =>{
 
                         <div className="form-grid">
                             {FormDataDelivery.map(x =>(
-                                <FormElement key={x.title} title={x.title} imgSrc="/favicon.png"/>
+                                <FormElement key={x.title} title={x.title} imgSrc={x.img}/>
                             ))}
                         </div>
                     </section>
@@ -133,7 +133,7 @@ const Dash: React.FC = () =>{
 
                         <div className="form-grid">
                             {FormDataIntegration.map(x =>(
-                                <FormElement key={x.title} title={x.title} imgSrc="/favicon.png"/>
+                                <FormElement key={x.title} title={x.title} imgSrc={x.img}/>
                             ))}
                         </div>
                     </section>
