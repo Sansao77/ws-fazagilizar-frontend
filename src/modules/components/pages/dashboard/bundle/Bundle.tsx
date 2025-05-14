@@ -3,6 +3,7 @@ import SwiperCore from 'swiper';
 import {Swiper, SwiperSlide} from "swiper/react";
 import { Pagination, Autoplay } from 'swiper/modules';
 import './bundle.scss'
+import { bundleData } from "../../../../../shared/mock/bundle";
 
 SwiperCore.use([Pagination, Autoplay])
 
@@ -28,47 +29,13 @@ const Bundle: React.FC = () =>{
                 el: '.swiper-custom-pagination'
             }}
             >
-                <SwiperSlide>
-                    <IonCard color="primary">
-                        <IonImg src="/img-teste.png" alt="teste" />
-                        <IonCardTitle>Slide 1</IonCardTitle>
-                    </IonCard>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <IonCard color="medium">
-                        <IonImg src="/img-teste.png" alt="teste" />
-                        <IonCardTitle>Slide 2</IonCardTitle>
-                    </IonCard>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <IonCard color="secondary">
-                        <IonImg src="/img-teste.png" alt="teste" />
-                        <IonCardTitle>Slide 3</IonCardTitle>
-                    </IonCard>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <IonCard color="tertiary">
-                        <IonImg src="/img-teste.png" alt="teste" />
-                        <IonCardTitle>Slide 4</IonCardTitle>
-                    </IonCard>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <IonCard color="success">
-                        <IonImg src="/img-teste.png" alt="teste" />
-                        <IonCardTitle>Slide 5</IonCardTitle>
-                    </IonCard>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <IonCard color="warning">
-                        <IonImg src="/img-teste.png" alt="teste" />
-                        <IonCardTitle>Slide 6</IonCardTitle>
-                    </IonCard>
-                </SwiperSlide>
+                {bundleData.map(x => (
+                    <SwiperSlide key={x.title}>
+                        <IonCard>
+                            <IonImg src={x.img} alt={x.title}></IonImg>
+                        </IonCard>
+                    </SwiperSlide>
+                ))}
             </Swiper>
 
             <div className="swiper-custom-pagination"></div>

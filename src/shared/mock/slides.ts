@@ -51,4 +51,4 @@ export const topClients:ISlides[] = [
         title: 'Blusa manga ',
         codigo: 336983,
     },
-] 
+];
