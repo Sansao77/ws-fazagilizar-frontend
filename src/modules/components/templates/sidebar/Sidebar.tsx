@@ -22,7 +22,7 @@ const Sidebar: React.FC = () => {
     }
 
     return (
-        <IonMenu type='overlay' side='start' contentId='app' menuId='side-menu'>
+        <IonMenu side='start' contentId='app' menuId='side-menu'>
             <IonHeader>
                 <header>
                     <img 
