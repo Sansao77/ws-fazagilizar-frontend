@@ -1,6 +1,5 @@
-import { IonButton, IonContent, IonIcon, IonSelect, IonSelectOption } from "@ionic/react"
+import { IonButton, IonContent } from "@ionic/react"
 import './dash.scss'
-import { homeOutline, key } from "ionicons/icons"
 import Bundle from "./bundle/Bundle"
 import SaleCard from "../../../../shared/components/sale-card/SaleCard"
 import { FormDataDelivery, FormDataIntegration, FormDataPayment, SalesCardData } from "../../../../shared/mock/card-data"
@@ -13,26 +12,25 @@ import FormElement from "../../../../shared/components/form-element/FormElement"
 import DateComponent from "./date-component/DateComponent"
 import SlideData from "./slide-data/SlideData"
 import { productsBestSold, topClients } from "../../../../shared/mock/slides"
+import DashHeader from "../../../../shared/components/dash-header/DashHeader"
+import { IBreadcrumbs } from "../../../interfaces/sidebar"
 
 const Dash: React.FC = () =>{
+    const breadcrumbs:Readonly<Partial<IBreadcrumbs>> = {
+        breadcrumbs: [
+            {
+                text: 'Dashboard',
+                route: '/home/dash'
+            }
+        ]
+    }
+
     return (
-        <>
         <IonContent>
             <main>
                 <Bundle />
 
-                <section className="dash-header">
-                    <span className="title">Dashboard</span>
-
-                    <div className="dash-outline">
-                        <IonIcon
-                        icon={homeOutline}
-                        size="small"
-                        />
-
-                        <span>Dashboard</span>
-                    </div>
-                </section>
+                <DashHeader title="Dashboard" breadcrumbs={breadcrumbs.breadcrumbs}/>
 
                 <section className="notifications">
                     <span>Receba push notificações de novos pedidos em seu dispositivo</span>
@@ -140,7 +138,6 @@ const Dash: React.FC = () =>{
                 </section>
             </main>
         </IonContent>
-        </>
     )
 }
 

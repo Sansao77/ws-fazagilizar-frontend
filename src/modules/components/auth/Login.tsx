@@ -37,8 +37,8 @@ const Login:React.FC = () =>{
                                 <IonInputPasswordToggle slot="end" />
                             </IonInput>
 
-                            <ReCAPTCHA sitekey={import.meta.env.VITE_SITE_KEY} />
-
+                            <ReCAPTCHA className="g-recaptcha" sitekey={import.meta.env.VITE_SITE_KEY} />
+                            
                             <IonButton 
                             expand="block"
                             routerLink="/home/dash"
@@ -46,9 +46,9 @@ const Login:React.FC = () =>{
                                 <IonIcon slot="start" icon={checkmark} aria-hidden></IonIcon>
                                 ENTRAR
                             </IonButton>
-                        </form>
 
-                        <a id="forgot-password">Esqueci minha senha</a>
+                            <a id="forgot-password">Esqueci minha senha</a>
+                        </form>
                     </div>
                 </div>
             </IonContent>
