@@ -1,4 +1,4 @@
-import { BarChart, PieChart, ResponsiveChartContainer, pieArcLabelClasses } from "@mui/x-charts"
+import { BarChart, PieChart} from "@mui/x-charts"
 import { axisClasses } from '@mui/x-charts/ChartsAxis';
 import { dataset, valueFormatter } from "../../mock/stores-data"
 import './statistics.scss'

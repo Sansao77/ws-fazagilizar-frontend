@@ -64,7 +64,6 @@ const Login:React.FC = () => {
                                 <IonIcon slot="start" icon={keyOutline} aria-hidden />
                                 <IonInputPasswordToggle slot="end" />
                             </IonInput>
-
                             <IonButton 
                                 expand="block"
                                 className="enter"
@@ -73,9 +72,9 @@ const Login:React.FC = () => {
                                 <IonIcon slot="start" icon={checkmark} aria-hidden />
                                 ENTRAR
                             </IonButton>
-                        </form>
 
-                        <a id="forgot-password">Esqueci minha senha</a>
+                            <a id="forgot-password">Esqueci minha senha</a>
+                        </form>
                     </div>
                 </div>
             </IonContent>

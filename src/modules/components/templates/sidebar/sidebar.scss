@@ -46,7 +46,7 @@ header{
     align-items: center;
 
     &:hover{
-        opacity: 0.7;
+        text-shadow: 0 0 8px #ffffff;
         cursor: pointer;
     }
 }
@@ -78,8 +78,8 @@ header{
 }
 
 .border-inside{
-    border-left: 1px solid white;
-    padding-left: 1rem;
+    margin: 0.5rem 0;
+    padding-left: 2.4rem;
 }
 
 .gray-component{
