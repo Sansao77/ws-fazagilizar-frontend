@@ -3,26 +3,31 @@ import { ISaleCard } from "../../modules/interfaces/sale-card";
 export const SalesCardData:ISaleCard[] = [
     {
         id: "1",
+        title: "Total de Vendas",
         salesValue: 3856,
         trendingValue: 10
     },
     {
         id: "2",
+        title: "Vendas Online",
         salesValue: 1052,
         trendingValue: 30
     },
     {
         id: "3",
+        title: "Vendas Feira",
         salesValue: 980,
         trendingValue: 5
     },
     {
         id: "4",
+        title: "Vendas Loja 1",
         salesValue: 750,
         trendingValue: -1
     },
     {
         id: "5",
+        title: "Vendas Loja 2",
         salesValue: 856,
         trendingValue: 5
     }

@@ -10,6 +10,7 @@ export const allMenu:IMenuItem[] = [
     {
         title: 'Minha Loja',
         icon: briefcaseOutline,
+        //route: '/home/my-store',
         children: [
             {
                 title: 'Autenticar ERP',
@@ -21,7 +22,8 @@ export const allMenu:IMenuItem[] = [
             },
             {
                 title: 'Configurações',
-                children: [
+                route: '/home/my-store/configurations'
+                /*children: [
                     {
                         title: 'Usuários',
                         route: '/404',
@@ -38,7 +40,7 @@ export const allMenu:IMenuItem[] = [
                         title: 'Vender na Feira',
                         route: '/404',
                     },
-                ]
+                ]*/
             },
             {
                 title: 'Gestor de Filial',
