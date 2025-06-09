@@ -5,7 +5,6 @@ import { IonRouterOutlet } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import Home from "./modules/components/home/Home";
 import AuthRoutes from "./modules/components/auth/auth.routes";
-import MyStore from "./modules/components/pages/my-store/MyStore";
 
 const AppRoutes: React.FC = () =>{
     return (
