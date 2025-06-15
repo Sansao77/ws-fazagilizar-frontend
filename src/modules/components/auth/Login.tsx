@@ -5,7 +5,8 @@ import {
     IonIcon, 
     IonInput, 
     IonInputPasswordToggle, 
-    IonPage 
+    IonPage, 
+    useIonRouter
 } from "@ionic/react";
 import { useState } from "react";
 import './login.scss';
@@ -17,6 +18,7 @@ const Login:React.FC = () => {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const router = useIonRouter();
 
     const SubmitForm = async () => {
         //const authService = new AuthService();
@@ -25,7 +27,7 @@ const Login:React.FC = () => {
             //const result = await authService.login(username, password);
             
             if(username === 'user' && password === '123456'){
-                window.location.href = "/home";
+                router.push("/home", 'forward')
                 //TokenManager.saveToken(result);
             } else {
                 alert("Usuário ou senha incorretos!");
