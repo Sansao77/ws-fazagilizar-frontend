@@ -1,0 +1,48 @@
+@use '/public/styles/styles.scss';
+
+.white-container{
+    @extend .default-container;
+    padding: 0;
+}
+
+.extra-padding{
+    padding: 0.6rem
+}
+
+.form-tabs{
+    display: flex;
+    background-color: #eeeded;
+}
+.form-header{
+    @extend .form-tabs;
+    border-radius: 0.5rem 0.5rem 0 0;
+    color: black;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: small;
+    font-weight: 500;
+}
+
+.form-footer{
+    @extend .form-tabs;
+    justify-content: flex-end;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.table-header{
+    font-weight: bold;
+}
+
+.table-row-body{
+    text-transform: uppercase;
+    border-bottom: 1px solid rgb(191, 191, 191);
+}
+
+.not-found-data{
+    display: flex;
+    text-align: center !important;
+    font-weight: bolder;
+    border-radius: 0 0 0.5rem 0.5rem !important;
+    background-color: #eeeded;
+    text-transform: uppercase;
+}
