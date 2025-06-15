@@ -7,12 +7,36 @@ import {
     IonInputPasswordToggle, 
     IonPage 
 } from "@ionic/react";
-import ReCAPTCHA from "react-google-recaptcha";
-
-import './login.scss'
+import { useState } from "react";
+import './login.scss';
 import { checkmark, keyOutline, personOutline } from "ionicons/icons";
+import { AuthService } from "../../../shared/services/AuthService";
+import { TokenManager } from "../../../shared/utils/TokenManager";
 
-const Login:React.FC = () =>{
+const Login:React.FC = () => {
+
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+
+    const SubmitForm = async () => {
+        const authService = new AuthService();
+
+        try {
+            const result = await authService.login(username, password);
+            
+            if(result){
+                window.location.href = "/home/dash";
+                TokenManager.saveToken(result);
+            } else {
+                alert("Usuário ou senha incorretos!");
+            }
+
+        } catch (error) {
+            console.error("Erro ao realizar login", error);
+            alert("Erro ao tentar realizar login, tente novamente.");
+        }
+    };
+
     return (
         <IonPage>
             <IonContent>
@@ -22,28 +46,30 @@ const Login:React.FC = () =>{
 
                         <form className="form-data">
                             <IonInput 
-                            placeholder="Nome de usuário"
-                            fill="outline">
-                                <IonIcon slot="start" icon={personOutline} aria-hidden></IonIcon>
+                                placeholder="Nome de usuário"
+                                fill="outline"
+                                value={username}
+                                onIonInput={(e) => setUsername(e.detail.value!)}
+                            >
+                                <IonIcon slot="start" icon={personOutline} aria-hidden />
                             </IonInput>
 
                             <IonInput 
-                            placeholder="Senha"
-                            fill="outline"
-                            type="password"
+                                placeholder="Senha"
+                                fill="outline"
+                                type="password"
+                                value={password}
+                                onIonInput={(e) => setPassword(e.detail.value!)}
                             >
-                                <IonIcon slot="start" icon={keyOutline} aria-hidden></IonIcon>
-
+                                <IonIcon slot="start" icon={keyOutline} aria-hidden />
                                 <IonInputPasswordToggle slot="end" />
                             </IonInput>
-
-                            <ReCAPTCHA className="g-recaptcha" sitekey={import.meta.env.VITE_SITE_KEY} />
-                            
                             <IonButton 
-                            expand="block"
-                            routerLink="/home/dash"
-                            className="enter">
-                                <IonIcon slot="start" icon={checkmark} aria-hidden></IonIcon>
+                                expand="block"
+                                className="enter"
+                                onClick={SubmitForm}
+                            >
+                                <IonIcon slot="start" icon={checkmark} aria-hidden />
                                 ENTRAR
                             </IonButton>
 
@@ -54,15 +80,15 @@ const Login:React.FC = () =>{
             </IonContent>
 
             <IonAlert
-            trigger="forgot-password"
-            header="Recuperar Senha"
-            buttons={['ENVIAR']}
-            inputs={[
-                {
-                    placeholder: 'Digite seu e-mail'
-                }
-            ]}
-            ></IonAlert>
+                trigger="forgot-password"
+                header="Recuperar Senha"
+                buttons={['ENVIAR']}
+                inputs={[
+                    {
+                        placeholder: 'Digite seu e-mail'
+                    }
+                ]}
+            />
         </IonPage>
     )
 };
