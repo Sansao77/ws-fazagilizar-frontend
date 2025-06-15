@@ -10,8 +10,8 @@ import {
 import { useState } from "react";
 import './login.scss';
 import { checkmark, keyOutline, personOutline } from "ionicons/icons";
-import { AuthService } from "../../../shared/services/AuthService";
-import { TokenManager } from "../../../shared/utils/TokenManager";
+//import { AuthService } from "../../../shared/services/AuthService";
+//import { TokenManager } from "../../../shared/utils/TokenManager";
 
 const Login:React.FC = () => {
 
@@ -19,14 +19,14 @@ const Login:React.FC = () => {
     const [password, setPassword] = useState('');
 
     const SubmitForm = async () => {
-        const authService = new AuthService();
+        //const authService = new AuthService();
 
         try {
-            const result = await authService.login(username, password);
+            //const result = await authService.login(username, password);
             
-            if(result){
+            if(username === 'user' && password === '123456'){
                 window.location.href = "/home/dash";
-                TokenManager.saveToken(result);
+                //TokenManager.saveToken(result);
             } else {
                 alert("Usuário ou senha incorretos!");
             }
