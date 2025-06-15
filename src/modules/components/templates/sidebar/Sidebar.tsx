@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import './sidebar.scss';
 import { allMenu } from './sidebar-content';
-import { IonContent, IonHeader, IonIcon, IonMenu } from '@ionic/react';
+import { IonContent, IonHeader, IonIcon, IonMenu, useIonRouter } from '@ionic/react';
 import { chevronUp,chevronDown } from 'ionicons/icons';
 import { IMenuItem } from '../../../interfaces/sidebar';
 
 const Sidebar: React.FC = () => {
     const [sideContent, setSideContent] = useState(allMenu);
+    const router = useIonRouter();
 
     function setVisibility(title: string){
         const updateSideBar = (sideContent:IMenuItem[], title: string):IMenuItem[] => 
@@ -47,7 +48,11 @@ const Sidebar: React.FC = () => {
                     {sideContent.map((x)=>
                         (x.children === undefined)? 
                         (
-                        <a href={x.route} key={x.title} className='align-component first-component'>
+                        <a 
+                        key={x.title} 
+                        className='align-component first-component'
+                        onClick={() => {router.push((x.route || '/404'), 'forward')}}
+                        >
                             <div className='align-link'>
                                 {x.icon &&
                                     <IonIcon 
@@ -83,7 +88,11 @@ const Sidebar: React.FC = () => {
                                 x.children.map(y => 
                                     (y.children === undefined)?
                                     (
-                                        <a href={y.route} key={y.title}  className='align-component'>
+                                        <a 
+                                        key={y.title}  
+                                        className='align-component'
+                                        onClick={() => {router.push((y.route || '/404'), 'forward')}}
+                                        >
                                             <div className='align-link'>
                                                 {y.icon &&
                                                     <IonIcon 
@@ -115,7 +124,11 @@ const Sidebar: React.FC = () => {
 
                                             <div className='padding-inside'>
                                                 {y.children.map(z =>
-                                                    <a href={z.route} key={z.title} className='align-component'>
+                                                    <a 
+                                                    key={z.title} 
+                                                    className='align-component'
+                                                    onClick={() => {router.push((z.route || '/404'), 'forward')}}
+                                                    >
                                                         <div className='align-link gray-component'>
                                                             {z.icon &&
                                                                 <IonIcon 
