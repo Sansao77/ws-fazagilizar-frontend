@@ -20,7 +20,7 @@ const DashHeader:React.FC<Props> = ({title, breadcrumbs}:Props) =>{
                 <IonBreadcrumbs>
                     {breadcrumbs && (
                         breadcrumbs.map((breadcrumb, index) => (
-                            <IonBreadcrumb href={breadcrumb.route} style={index === 0? {"color":"#73439A"}:{"color":"#000000"}}>
+                            <IonBreadcrumb key={index} href={breadcrumb.route} style={index === 0? {"color":"#73439A"}:{"color":"#000000"}}>
                                 {breadcrumb.text}
                             </IonBreadcrumb>
                         ))
