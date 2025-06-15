@@ -12,7 +12,6 @@ const AppRoutes: React.FC = () =>{
         <IonReactRouter>
             <IonRouterOutlet>
                 <AuthRoutes />
-                <HomeRoutes />
                 <Route path="/home" component={Home} />
 
                 <Route exact path="/">
