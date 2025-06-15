@@ -121,7 +121,7 @@ const CounterSale:React.FC = () =>{
                         </div>
 
                         <form action="" method="post" className='form-requests'>
-                            <IonList className='default-container gap-values'>
+                            <div className='default-container gap-values'>
                                 <IonInput 
                                 label='Qtde Itens:' 
                                 fill='outline'
@@ -176,7 +176,7 @@ const CounterSale:React.FC = () =>{
                                 >
                                     <IonSelectOption value='selecione'>-- SELECIONE --</IonSelectOption>
                                 </IonSelect>
-                            </IonList>
+                            </div>
 
                             <DefaultButton 
                             text="Finalizar Pedido" 
