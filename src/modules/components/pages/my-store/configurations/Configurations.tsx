@@ -51,7 +51,7 @@ const Configurations:React.FC = () =>{
             },
             {
                 text: 'Gestor de Empresas',
-                route: '/404'
+                route: '/home/my-store/branch-manager'
             },
             {
                 text: 'sapatariateste',
