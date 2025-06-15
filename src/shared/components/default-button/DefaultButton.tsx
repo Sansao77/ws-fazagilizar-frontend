@@ -4,15 +4,17 @@ import { IDefaultButton } from "../../../modules/interfaces/default-button";
 
 interface Props extends IDefaultButton{};
 
-const DefaultButton: React.FC<Props> = ({text, icon, iconOnly, backgroundColor, route}) => {
+const DefaultButton: React.FC<Props> = ({id, text, icon, iconOnly, backgroundColor, route, ...rest}) => {
     return (
-        <IonButton 
+        <IonButton
+        {...rest}
+        id={id}
         routerLink={route}
         slot={iconOnly? "icon-only": ""}
         style={{
             '--background': backgroundColor,
         }}>
-            <IonIcon className="ion-icon" slot="start" icon={icon}></IonIcon>
+            <IonIcon className="ion-icon" slot={iconOnly? 'icon-only':'start'} icon={icon}></IonIcon>
 
             <span className="button-text">{text}</span>
         </IonButton>

@@ -40,7 +40,7 @@ const SaleCard = ({data}:Props) =>{
                 <h1>{data.salesValue}</h1>
 
                 <IonSelect 
-                aria-label="Fruit" 
+                aria-label="Data" 
                 interface="popover"
                 justify="start"
                 label="Este "

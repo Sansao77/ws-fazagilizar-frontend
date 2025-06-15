@@ -1,0 +1,62 @@
+@use '/public/styles/styles.scss';
+
+.white-container{
+    @extend .default-container;
+    padding: 0;
+}
+
+.extra-padding{
+    padding: 0.6rem
+}
+
+.grid-form{
+    display: grid;
+    color: black;
+    border-bottom: 1px solid gray;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem 2rem;
+    grid-template-areas: "a a b b c c";
+
+    .item-a{
+        grid-area: a;
+    }
+
+    .item-b{
+        grid-area: b;
+    }
+
+    .item-c{
+        grid-area: c;
+    }
+
+    @media (max-width: 440px){
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "a"
+        "b"
+        "c";
+        row-gap: 1rem;
+    }
+}
+
+.form-footer{
+    display: flex;
+    justify-content: flex-end;
+    background-color: #eeeded;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.table-header{
+    >*{
+        font-weight: bold;
+    }
+}
+
+.table-row-body{
+    text-transform: uppercase;
+    border-bottom: 1px solid rgb(191, 191, 191);
+
+    /*.buttons-table{
+        display: flex !important;
+    }*/
+}

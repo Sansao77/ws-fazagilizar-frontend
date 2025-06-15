@@ -1,0 +1,20 @@
+@use '/public/styles/styles.scss' as *;
+@use '/public/styles/variables.scss' as *;
+
+.table-row-body{
+    text-transform: uppercase;
+    border-bottom: 1px solid rgb(191, 191, 191);
+
+    /*.buttons-table{
+        display: flex !important;
+    }*/
+}
+
+.alert{
+    //background-color: white !important;
+
+}
+
+.confirm-button{
+    background-color: $green-white;
+}

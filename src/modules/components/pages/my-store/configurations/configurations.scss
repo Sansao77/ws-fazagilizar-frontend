@@ -1,0 +1,46 @@
+.grid-buttons{
+    display: grid;
+    margin: 1rem 0;
+    gap: 1.2rem;
+    grid-template-columns: repeat(5, 1fr);
+
+    @media (max-width:1000px){
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width:540px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width:400px){
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+.config-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 0.5rem;
+    color: white;
+    background-color: #3e70c9;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    &:hover{
+        opacity: 0.9;
+    }
+
+    .icon{
+        font-size: 4rem !important;
+    }
+
+    .title{
+        text-transform: uppercase;
+        font-size: smaller;
+        font-weight: 600;
+    }
+}
