@@ -1,20 +1,35 @@
-import { IonContent, IonIcon } from "@ionic/react";
+import { IonContent, IonIcon, IonItem, IonList, IonPopover } from "@ionic/react";
 import DashHeader from "../../../../../shared/components/dash-header/DashHeader";
 import { IBreadcrumbs } from "../../../../interfaces/sidebar";
 import './configurations.scss'
-import { barChartOutline, codeSlashOutline, cogOutline, copyOutline, expandOutline, informationCircleOutline, logoWhatsapp, pricetagOutline, printOutline, serverOutline, timeOutline } from "ionicons/icons";
+import { 
+    barChartOutline, 
+    cashOutline, 
+    cogOutline, 
+    copyOutline, 
+    expandOutline, 
+    informationCircleOutline, 
+    logoWhatsapp, 
+    mapOutline, 
+    pricetagOutline, 
+    printOutline, 
+    serverOutline, 
+    timeOutline 
+} from "ionicons/icons";
+import { useState } from "react";
 
-const ButtonConfig: React.FC<{icon:string, title: string}> = ({icon, title}) =>{
+const ButtonConfig: React.FC<{id?:string, icon:string, title: string}> = ({id,icon, title}) =>{
     return (
-        <div className="config-button">
-            <IonIcon icon={icon} className="icon" style={{}}/>
+        <button id={id} className="config-button">
+            <IonIcon icon={icon} className="icon" />
 
             <span className="title">{title}</span>
-        </div>
+        </button>
     )
 }
 
 const Configurations:React.FC = () =>{
+    
     const buttons = [
         {icon: copyOutline, title: "Layout"},
         {icon: barChartOutline, title: "Banners Promocionais"},
@@ -24,8 +39,8 @@ const Configurations:React.FC = () =>{
         {icon: logoWhatsapp, title: "Configuração Chatbot"},
         {icon: timeOutline, title: "Tempo de Cancelamento \n Automatico Pedido"},
         {icon: informationCircleOutline, title: "Botões Informações"},
-        {icon: printOutline, title: "Configurações \n loja / impressão"},
-        {icon: pricetagOutline, title: "Configurações \n Desconto"},
+        {id: "hover-configurations-store", icon: printOutline, title: "Configurações \n loja / impressão"},
+        {id: "hover-configurations-discount", icon: pricetagOutline, title: "Configurações \n Desconto"},
     ]
 
     const breadcrumbs:Readonly<Partial<IBreadcrumbs>> = {
@@ -56,10 +71,53 @@ const Configurations:React.FC = () =>{
 
                 <section className="grid-buttons">
                     {buttons.map(x=>(
-                        <ButtonConfig icon={x.icon} title={x.title}></ButtonConfig>
+                        <ButtonConfig id={x.id} icon={x.icon} title={x.title}></ButtonConfig>
                     ))}
                 </section>
             </main>
+
+            <IonPopover 
+            trigger="hover-configurations-store"
+            side="bottom"
+            alignment="center"
+            triggerAction="hover"
+            >
+                <IonContent>
+                    <IonItem color='primary'>
+                        <IonIcon slot="start" icon={mapOutline}></IonIcon>
+                        <span>Lojas</span>
+                    </IonItem>
+
+                    <IonItem color='primary'>
+                        <IonIcon slot="start" icon={printOutline}></IonIcon>
+                        <span>Formas de impressão</span>
+                    </IonItem>
+                </IonContent>
+            </IonPopover>
+
+            <IonPopover 
+            trigger="hover-configurations-discount"
+            triggerAction="hover"
+            alignment="center"
+            side="bottom"
+            >
+                <IonContent>
+                    <IonItem color='primary'>
+                        <IonIcon slot="start" icon={cashOutline}></IonIcon>
+                        <span>Desconto Pagamento</span>
+                    </IonItem>
+
+                    <IonItem color='primary'>
+                        <IonIcon slot="start" icon={cashOutline}></IonIcon>
+                        <span>Desconto Produtos</span>
+                    </IonItem>
+
+                    <IonItem color='primary'>
+                        <IonIcon slot="start" icon={pricetagOutline}></IonIcon>
+                        <span>Gestor de Cupons</span>
+                    </IonItem>
+                </IonContent>
+            </IonPopover>
         </IonContent>
     );
 }
