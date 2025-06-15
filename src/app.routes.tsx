@@ -14,7 +14,6 @@ const AppRoutes: React.FC = () =>{
             <IonRouterOutlet>
                 <AuthRoutes />
                 <Route path="/home" component={Home} />
-                <Route path="/login" component={Login}/>
 
                 <Route exact path="/">
                     <Redirect to="/login"/>
