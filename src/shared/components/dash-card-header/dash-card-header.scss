@@ -1,0 +1,56 @@
+@use '/public/styles/styles.scss' as *;
+@use '/public/styles/variables.scss' as *;
+
+
+.dash-header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin: 0.3rem 0;
+    padding: 1rem;
+    background-color: white;
+    justify-content: space-between;
+    color: black;
+    border-radius: 0.8rem;
+    box-shadow: 10px 10px 5px $shadow-effect;
+}
+
+.leftContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: black;
+
+    .dash-outline {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        color: #73439A
+    }
+}
+
+.title {
+    font-weight: 400;
+    color: black;
+
+    .pageName {
+        color: #899298
+    }
+}
+
+.containerButtons {
+    gap:1rem;
+    display: flex;
+}
+
+.buttonAction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    gap:0.5rem;
+    font-weight: 400;
+    color: white;
+    box-shadow: 3px 3px 3px $shadow-effect;
+}
