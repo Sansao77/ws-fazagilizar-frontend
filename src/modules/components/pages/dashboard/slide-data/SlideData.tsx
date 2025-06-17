@@ -40,7 +40,7 @@ const SlideData: React.FC<Props> = ({data}) =>{
                         <div className="container-contant">
                             <h1 className="index">{index + 1}</h1>
 
-                            <img src='/favicon.png' alt="ionic" />
+                            <img src={slide.img} alt={slide.title} className="img-slide"/>
 
                             <div className="text-contant">
                                 <span className="title">{slide.title}</span>

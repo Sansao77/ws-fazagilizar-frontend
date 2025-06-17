@@ -3,9 +3,10 @@
 main{
     padding: 4.5rem 1rem 1rem 1rem;
     background-color: $background-gray;
+    min-height: 100%;
     
     >*{
-        padding: 0.5rem 0;
+        margin: 1rem 0;
     }
 }
 
@@ -14,6 +15,10 @@ main{
     background-color: white;
     border-radius: 0.5rem;
     box-shadow: 3px 3px 5px $shadow-effect;
+
+    @media (max-width){
+        padding: 0.8rem 0;
+    }
 }
 
 .upper-text{

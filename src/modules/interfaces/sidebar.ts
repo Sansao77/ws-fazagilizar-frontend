@@ -4,4 +4,12 @@ export interface IMenuItem{
     route?: string;
     children?: IMenuItem[];
     showChildren?: boolean;
-}
+};
+
+export interface IBreadcrumbs{
+    title: string;
+    breadcrumbs?: {
+        text: string,
+        route?: string,
+    }[];
+};

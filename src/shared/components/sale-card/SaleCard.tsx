@@ -20,7 +20,7 @@ const SaleCard = ({data}:Props) =>{
     return (
         <IonCard className="ion-card default-container">
             <IonCardHeader className="header">
-                <IonCardTitle class="title">Total de Vendas</IonCardTitle>
+                <IonCardTitle class="title">{data.title}</IonCardTitle>
                 <IonBadge class="data-bagde" style={
                     (data.trendingValue < 0)?
                     {"backgroundColor": "#F47A362B", "color":"#F44236"}
@@ -40,7 +40,7 @@ const SaleCard = ({data}:Props) =>{
                 <h1>{data.salesValue}</h1>
 
                 <IonSelect 
-                aria-label="Fruit" 
+                aria-label="Data" 
                 interface="popover"
                 justify="start"
                 label="Este "

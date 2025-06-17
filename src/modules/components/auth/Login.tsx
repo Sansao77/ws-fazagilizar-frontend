@@ -5,28 +5,30 @@ import {
     IonIcon, 
     IonInput, 
     IonInputPasswordToggle, 
-    IonPage 
+    IonPage, 
+    useIonRouter
 } from "@ionic/react";
 import { useState } from "react";
 import './login.scss';
 import { checkmark, keyOutline, personOutline } from "ionicons/icons";
-import { AuthService } from "../../../shared/services/AuthService";
-import { TokenManager } from "../../../shared/utils/TokenManager";
+//import { AuthService } from "../../../shared/services/AuthService";
+//import { TokenManager } from "../../../shared/utils/TokenManager";
 
 const Login:React.FC = () => {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const router = useIonRouter();
 
     const SubmitForm = async () => {
-        const authService = new AuthService();
+        //const authService = new AuthService();
 
         try {
-            const result = await authService.login(username, password);
+            //const result = await authService.login(username, password);
             
-            if(result){
-                window.location.href = "/home/dash";
-                TokenManager.saveToken(result);
+            if(username === 'user' && password === '123456'){
+                router.push("/home", 'forward')
+                //TokenManager.saveToken(result);
             } else {
                 alert("Usuário ou senha incorretos!");
             }
@@ -64,7 +66,6 @@ const Login:React.FC = () => {
                                 <IonIcon slot="start" icon={keyOutline} aria-hidden />
                                 <IonInputPasswordToggle slot="end" />
                             </IonInput>
-
                             <IonButton 
                                 expand="block"
                                 className="enter"
@@ -73,9 +74,9 @@ const Login:React.FC = () => {
                                 <IonIcon slot="start" icon={checkmark} aria-hidden />
                                 ENTRAR
                             </IonButton>
-                        </form>
 
-                        <a id="forgot-password">Esqueci minha senha</a>
+                            <a id="forgot-password">Esqueci minha senha</a>
+                        </form>
                     </div>
                 </div>
             </IonContent>

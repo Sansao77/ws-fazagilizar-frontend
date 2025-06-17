@@ -2,6 +2,8 @@
 @use 'swiper/css' as *;
 @use 'swiper/css/navigation' as *;
 
+$img-size: 5rem;
+
 .container-contant{
     display: flex;
     align-items: center;
@@ -35,6 +37,11 @@
         font-size: xx-large;
         font-weight: bold;
     }
+
+    .img-slide{
+        width: $img-size;
+        height: $img-size;
+    }
 }
 
 /* Define altura e padding do swiper */
@@ -48,6 +55,6 @@
     left: 0; /* ou -20px se quiser mais afastado */
 }
   
-  .swiper-button-next {
+.swiper-button-next {
     right: 0;
 }

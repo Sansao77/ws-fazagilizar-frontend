@@ -1,4 +1,4 @@
-import { IonPage, IonRouterOutlet, IonTabs } from "@ionic/react"
+import { IonPage, IonRouterOutlet } from "@ionic/react"
 import Header from "../templates/header/Header"
 import Sidebar from "../templates/sidebar/Sidebar"
 import HomeRoutes from "../pages/home.routes"

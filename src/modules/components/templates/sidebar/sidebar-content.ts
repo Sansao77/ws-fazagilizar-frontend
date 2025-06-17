@@ -17,32 +17,27 @@ export const allMenu:IMenuItem[] = [
             },
             {
                 title: 'Venda Balcão (PDV)',
-                route: '/404',
+                route: '/home/my-store/counter-sale',
             },
             {
                 title: 'Configurações',
-                children: [
-                    {
-                        title: 'Usuários',
-                        route: '/404',
-                    },
-                    {
-                        title: 'Grupos de e-mails',
-                        route: '/404',
-                    },
-                    {
-                        title: 'Dispositivos de Notificações',
-                        route: '/404',
-                    },
-                    {
-                        title: 'Vender na Feira',
-                        route: '/404',
-                    },
-                ]
+                route: '/home/my-store/configurations'
+            },
+            {
+                title: 'Usuários',
+                route: '/home/my-store/users'
+            },
+            {
+                title: 'Grupo de E-mails',
+                route: '/home/my-store/email'
+            },
+            {
+                title: 'Dispositivos Notificações',
+                route: '/home/my-store/branch-manager/notifications'
             },
             {
                 title: 'Gestor de Filial',
-                route: '/404',
+                route: '/home/my-store/branch-manager',
             }
         ]
     },
