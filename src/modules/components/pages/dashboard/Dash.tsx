@@ -21,7 +21,7 @@ const Dash: React.FC = () =>{
             <main>
                 <Bundle />
 
-                <section className="dash-header">
+                <section className="dash-header-card">
                     <span className="title">Dashboard</span>
 
                     <div className="dash-outline">

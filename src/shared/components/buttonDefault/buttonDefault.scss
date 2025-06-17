@@ -1,0 +1,30 @@
+@use '/public/styles/styles.scss' as *;
+@use '/public/styles/variables.scss' as *;
+
+
+.buttonAction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 400;
+    padding: 0.2rem 0.5rem 0.2rem 0.2rem;
+    color: white;
+    box-shadow: 3px 3px 3px $shadow-effect;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.25);
+        filter: brightness(1.1);
+    }
+}
+
+
+.icon-container{
+    width: 100%;
+    padding: 0.4rem;
+}
