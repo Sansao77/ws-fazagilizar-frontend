@@ -5,7 +5,8 @@ import {
   TableHead,
   TableBody,
   TableRow,
-  TableCell
+  TableCell,
+  Checkbox
 } from "@mui/material";
 import { checkmarkDoneOutline, documentTextOutline, printOutline } from "ionicons/icons";
 import { ButtonDefault } from '../../../../../shared/components/buttonDefault/buttonDefault';
@@ -16,9 +17,10 @@ export type TableOrderedsProps = {
 }
 
 const statusColors = {
-  'FINALIZADO': '#20B9AE',
-  'PENDENTE': '#FFC107',
-  'CANCELADO': '#DC3545'
+  'FINALIZADO': '#42B968',
+  'CANCELADO': '#F44236',
+  'CRIADO': '#3E70C9',
+  'EM TRANSPORTE': '#A567E2',
 }
 
 
@@ -29,6 +31,7 @@ const TableOrdereds: React.FC<TableOrderedsProps> = ({ data }: TableOrderedsProp
       <Table className="table-ordereds" size="small" aria-label="Tabela de pedidos">
         <TableHead>
           <TableRow sx={{ '& th': { fontWeight: 'bold' } }}>
+            <TableCell style={{ border: 'none' }}></TableCell> {/* Célula vazia para a coluna de checkbox */}
             <TableCell>ID <br /> Interno</TableCell>
             <TableCell>Pedido</TableCell>
             <TableCell>
@@ -53,8 +56,13 @@ const TableOrdereds: React.FC<TableOrderedsProps> = ({ data }: TableOrderedsProp
           {data.map((row) => (
             <TableRow
               key={row.vendedor}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
+              <TableCell>
+                <Checkbox 
+                  size="small"
+                  // Você pode adicionar aqui as props necessárias como onChange, checked, etc.
+                />
+              </TableCell>
               <TableCell component="th" scope="row">{row.internalId}</TableCell>
               <TableCell component="th" scope="row">{row.order}</TableCell>
               <TableCell component="th" scope="row">{row.shippingMethodAndPaymentMethod}</TableCell>
@@ -70,10 +78,12 @@ const TableOrdereds: React.FC<TableOrderedsProps> = ({ data }: TableOrderedsProp
                 }}>
                   <strong>{row.registrationStatus}</strong>
                 </span>
-              </TableCell>              <TableCell component="th" scope="row"> <span style={{ backgroundColor: row.sent ? '#42B968' : '#F44236', color: '#fff', padding: '0.2rem 0.5rem', borderRadius: '1rem' }}>{row.sent ? "Sim" : "Não"}</span></TableCell>
+              </TableCell>              
+              <TableCell component="th" scope="row"> <span style={{ backgroundColor: row.sent ? '#42B968' : '#F44236', color: '#fff', padding: '0.2rem 0.5rem', borderRadius: '1rem' }}>{row.sent ? "Sim" : "Não"}</span></TableCell>
               <TableCell component="th" scope="row"> <span style={{ backgroundColor: row.checked ? '#42B968' : '#F44236', color: '#fff', padding: '0.2rem 0.5rem', borderRadius: '1rem' }}>{row.checked ? "Sim" : "Não"}</span></TableCell>
               <TableCell component="th" scope="row"> <span style={{ backgroundColor: row.sentToERP ? '#42B968' : '#F44236', color: '#fff', padding: '0.2rem 0.5rem', borderRadius: '1rem' }}>{row.sentToERP ? "Sim" : "Não"}</span></TableCell>
-              <TableCell component="th" scope="row" style={{ display: 'flex', gap: '0rem', alignItems: 'center', justifyContent: 'center' }}>
+              <TableCell component="th" scope="row" >
+                <div style={{ display: 'flex', gap: '0rem', alignItems: 'center', justifyContent: 'center', border: 'none' }}>
                 <ButtonDefault
                   icon={<IonIcon
                     icon={checkmarkDoneOutline}
@@ -98,6 +108,7 @@ const TableOrdereds: React.FC<TableOrderedsProps> = ({ data }: TableOrderedsProp
                   strongColor='#36394F'
                   color='#36394F'
                 />
+                </div>
               </TableCell>
             </TableRow>
           ))}

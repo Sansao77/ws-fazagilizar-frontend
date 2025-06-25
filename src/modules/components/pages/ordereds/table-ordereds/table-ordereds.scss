@@ -2,12 +2,14 @@
   width: 100%;
   border-collapse: collapse;
   font-size: 12px;
-
+  padding: 1rem;
+  
   th,
   td {
     padding: 4px 8px;
-    border: 2px solid #dee2e6 !important;
+    border: 2px solid #dee2e6;
     white-space: nowrap;
+    line-height: 2rem;
     background-color: #ffffff;
     text-align: center;
   }
