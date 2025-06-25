@@ -1,0 +1,56 @@
+.table-ordereds {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+
+  th,
+  td {
+    padding: 4px 8px;
+    border: 2px solid #dee2e6 !important;
+    white-space: nowrap;
+    background-color: #ffffff;
+    text-align: center;
+  }
+
+  thead th {
+    font-weight: 600;
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    line-height: 1.2;
+    text-align: center;
+    }
+
+  tbody tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+
+  /* Variants for status highlighting — add the appropriate class to the TableRow if available */
+  tbody tr.status-cancelado {
+    background-color: #ffe8e8;
+  }
+
+  tbody tr.status-entregue {
+    background-color: #e2f6ea;
+  }
+
+  tbody tr.status-pendente {
+    background-color: #fffbe6;
+  }
+
+  /* Ações column layout */
+  td.actions-cell {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    button {
+      width: 22px;
+      height: 22px;
+      min-width: 22px;
+      font-size: 0.7rem;
+      padding: 0;
+    }
+  }
+}

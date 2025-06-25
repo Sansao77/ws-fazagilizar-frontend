@@ -13,7 +13,7 @@ export function ButtonDefault({ label, onclick, color, icon, strongColor }: Butt
         <button
             onClick={onclick}
             className="buttonAction"
-            style={{ backgroundColor: `${color}` }}
+            style={{ backgroundColor: `${color}`, padding: label? "0.2rem 0.5rem 0.2rem 0.2rem": "0.2rem" }}
         >
             {icon && <span className="icon-container" style={{ backgroundColor: `${strongColor}` }}>{icon}</span>}
             {label}
