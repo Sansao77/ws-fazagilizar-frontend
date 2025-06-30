@@ -1,29 +1,25 @@
 import React from 'react';
 import './header.scss';
-import { IonHeader, IonIcon, IonButton, IonToolbar, IonMenuButton } from '@ionic/react';
-import { menuController } from '@ionic/core';
+import { IonHeader, IonIcon, IonButton, IonToolbar, IonMenuToggle } from '@ionic/react';
 import { briefcaseOutline, expandOutline, informationCircleOutline, personCircleOutline } from 'ionicons/icons';
 
 interface Props{
     name: string,
 }
 
-const Header:React.FC<Props> = ({name}:Props) => {  
-    const openMenu = async() =>{
-        await menuController.open('side-menu');
-    }
-
+const Header:React.FC<Props> = ({name}:Props) => {
     return (
         <IonHeader id='app'>
             <IonToolbar>
                 <div className='header'>
-                    <IonMenuButton />
-                    {/*<IonButton onClick={openMenu} fill='clear'>
-                        <IonIcon 
-                        slot='icon-only' 
-                        icon={expandOutline}
-                        className='gray-element' />
-                    </IonButton>*/}
+                    <IonMenuToggle>
+                        <IonButton fill='clear'>
+                            <IonIcon 
+                            slot='icon-only' 
+                            icon={expandOutline}
+                            className='gray-element' />
+                        </IonButton>
+                    </IonMenuToggle>
 
                     <div className='user-data'>
                         <div className='products-display'>

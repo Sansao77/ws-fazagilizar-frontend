@@ -52,6 +52,7 @@ const Login:React.FC = () => {
                                 fill="outline"
                                 value={username}
                                 onIonInput={(e) => setUsername(e.detail.value!)}
+                                onKeyDown={(e) =>{e.key === 'Enter' && SubmitForm();}}
                             >
                                 <IonIcon slot="start" icon={personOutline} aria-hidden />
                             </IonInput>
@@ -62,6 +63,7 @@ const Login:React.FC = () => {
                                 type="password"
                                 value={password}
                                 onIonInput={(e) => setPassword(e.detail.value!)}
+                                onKeyDown={(e) =>{e.key === 'Enter' && SubmitForm();}}
                             >
                                 <IonIcon slot="start" icon={keyOutline} aria-hidden />
                                 <IonInputPasswordToggle slot="end" />

@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { ComponentProps, useState } from 'react';
 import './sidebar.scss';
 import { allMenu } from './sidebar-content';
 import { IonContent, IonHeader, IonIcon, IonMenu, useIonRouter } from '@ionic/react';
 import { chevronUp,chevronDown } from 'ionicons/icons';
 import { IMenuItem } from '../../../interfaces/sidebar';
 
-const Sidebar: React.FC = () => {
+interface Props extends ComponentProps<typeof IonMenu>{};
+
+const Sidebar: React.FC<Props> = ({...rest}) => {
     const [sideContent, setSideContent] = useState(allMenu);
     const router = useIonRouter();
 
@@ -23,7 +25,7 @@ const Sidebar: React.FC = () => {
     }
 
     return (
-        <IonMenu side='start' contentId='app' menuId='side-menu'>
+        <IonMenu {...rest}>
             <IonHeader>
                 <header>
                     <img 
@@ -91,7 +93,9 @@ const Sidebar: React.FC = () => {
                                         <a 
                                         key={y.title}  
                                         className='align-component'
-                                        onClick={() => {router.push((y.route || '/404'), 'forward')}}
+                                        onClick={() => {
+                                            router.push((y.route || '/404'), 'forward');
+                                        }}
                                         >
                                             <div className='align-link'>
                                                 {y.icon &&
