@@ -1,4 +1,4 @@
-import { IonPage, IonRouterOutlet } from "@ionic/react"
+import { IonContent, IonPage, IonRouterOutlet, IonSplitPane } from "@ionic/react"
 import Header from "../templates/header/Header"
 import Sidebar from "../templates/sidebar/Sidebar"
 import HomeRoutes from "../pages/home.routes"
@@ -6,12 +6,24 @@ import HomeRoutes from "../pages/home.routes"
 const Home:React.FC = () =>{
     return (
         <IonPage>
-            <Sidebar />
-            <Header name="Julia Costa"/>
+            <IonSplitPane when='lg' contentId="home" style={{ '--side-width': '20%' }}>
+                <Sidebar 
+                side='start' 
+                type='push'
+                menuId="sidebar"
+                contentId='home' 
+                swipeGesture={false}
+                disabled={false}
+                />
 
-            <IonRouterOutlet>
-                <HomeRoutes />
-            </IonRouterOutlet>
+                <IonContent id="home">
+                    <Header name="Julia Costa"/>
+
+                    <IonRouterOutlet>
+                        <HomeRoutes />
+                    </IonRouterOutlet>
+                </IonContent>
+            </IonSplitPane>
         </IonPage>
     )
 }

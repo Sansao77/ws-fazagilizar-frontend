@@ -9,3 +9,7 @@ body{
     width: 100vw;
     height: 100vh;
 }
+
+.ion-menu::part(backdrop) {
+  display: none !important;
+}
