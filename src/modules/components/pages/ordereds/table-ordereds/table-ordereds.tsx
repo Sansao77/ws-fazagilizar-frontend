@@ -23,7 +23,6 @@ const statusColors = {
   'EM TRANSPORTE': '#A567E2',
 }
 
-
 const TableOrdereds: React.FC<TableOrderedsProps> = ({ data }: TableOrderedsProps) => {
 
   return (
