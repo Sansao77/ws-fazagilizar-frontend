@@ -234,6 +234,10 @@ export const allMenu:IMenuItem[] = [
                 title: 'Frete',
                 route: '/404',
             },
+            {
+                title: 'Configurações de Envio',
+                route: '/home/shipping-config',
+            },
         ]
     },
     {
