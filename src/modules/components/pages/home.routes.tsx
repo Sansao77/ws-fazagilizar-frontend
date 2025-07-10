@@ -3,6 +3,9 @@ import Dash from "./dashboard/Dash";
 import ProductManagerRoutes from "./product-manager/product-manager.routes";
 import Ordereds from "./ordereds/ordereds";
 import MyStoreRoutes from "./my-store/my-store.routes";
+import ShippingConfig from "./shippingConfig/ShippingConfig";
+import PaymentIntegration from "./paymentIntegration/PaymentIntegration";
+import ProductManager from "./productManager/productManager";
 
 const HomeRoutes = () =>{
     return (
@@ -11,6 +14,9 @@ const HomeRoutes = () =>{
             <Route exact path="/home/ordereds" component={Ordereds}/>
             <MyStoreRoutes />
             <ProductManagerRoutes />
+            <Route exact path="/home/productManager" component={ProductManager}/>
+            <Route exact path="/home/shipping-config" component={ShippingConfig}/>
+            <Route exact path="/home/payment-integration" component={PaymentIntegration}/>
 
             <Route exact path="/home">
                 <Redirect to="/home/dash" />
