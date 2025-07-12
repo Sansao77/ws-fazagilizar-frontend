@@ -10,7 +10,8 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { Table, TableBody, TableCell, TableContainer, TableFooter, TableHead, TableRow } from '@mui/material';
 
 const Nofications: React.FC = () =>{
-    const breadcrumbs:Readonly<Partial<IBreadcrumbs>> = {
+    const breadcrumbs = ['Dashboard', 'Gestor de Filiais', 'Dispositivos Notificações']
+    /*const breadcrumbs:Readonly<Partial<IBreadcrumbs>> = {
         breadcrumbs: [
             {
                 text: 'Dashboard',
@@ -25,12 +26,12 @@ const Nofications: React.FC = () =>{
                 route: '/home/my-store/branch-manager/notifications'
             },
         ]
-    }
+    }*/
 
     return (
         <IonContent>
             <main>
-                <DashHeader title='Dispositivos para notificação | Gestor de Filiais' breadcrumbs={breadcrumbs.breadcrumbs} />
+                <DashHeader title='Dispositivos para notificação | Gestor de Filiais' breadcrumbs={breadcrumbs} />
 
                 <div style={{'width':'100%', 'display':'inline-flex','justifyContent':'end'}}>
                     <DefaultButton text="voltar" icon={arrowBackOutline} backgroundColor={buttonColors.VERMELHO}/>

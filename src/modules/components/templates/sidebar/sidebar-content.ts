@@ -1,7 +1,38 @@
 import { IMenuItem } from "../../../interfaces/sidebar";
-import {addOutline, briefcaseOutline, cogOutline, fileTrayFullOutline, homeOutline, layersOutline, people, pricetagOutline, shieldCheckmarkOutline} from 'ionicons/icons'
+import {briefcaseOutline, cogOutline, fileTrayFullOutline, homeOutline, layersOutline, people, pricetagOutline, shieldCheckmarkOutline} from 'ionicons/icons'
 
-export const allMenu:IMenuItem[] = [
+export const fullRoutes:{title:string, route?:string}[] = [
+    {
+        title: 'Dashboard',
+        route: '/home/dash'
+    },
+    {
+        title: 'Venda Balcão (PDV)',
+        route: '/home/my-store/counter-sale',
+    },
+    {
+        title: 'Configurações',
+        route: '/home/my-store/configurations'
+    },
+    {
+        title: 'Usuários',
+        route: '/home/my-store/users'
+    },
+    {
+        title: 'Grupo de E-mails',
+        route: '/home/my-store/email'
+    },
+    {
+        title: 'Dispositivos Notificações',
+        route: '/home/my-store/branch-manager/notifications'
+    },
+    {
+        title: 'Gestor de Filial',
+        route: '/home/my-store/branch-manager',
+    }
+]
+
+export const fullMenu:IMenuItem[] = [
     {
         title: 'Dashboard',
         route: '/home/dash',
@@ -66,15 +97,15 @@ export const allMenu:IMenuItem[] = [
         children: [
             {
                 title: 'Meus Clientes',
-                route: '/404',
+                route: '/home/people-manager/clients',
             },
             {
                 title: 'Meus Vendedores',
-                route: '/404',
+                route: '/home/people-manager/sellers',
             },
             {
                 title: 'Meus Gerentes',
-                route: '/404',
+                route: '/home/people-manager/managers',
             },
             {
                 title: 'Gestor de Usuários',

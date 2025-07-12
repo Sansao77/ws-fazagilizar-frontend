@@ -8,8 +8,9 @@ export interface IMenuItem{
 
 export interface IBreadcrumbs{
     title: string;
-    breadcrumbs?: {
+    breadcrumbs: string[];
+    /*breadcrumbs?: {
         text: string,
         route?: string,
-    }[];
+    }[];*/
 };

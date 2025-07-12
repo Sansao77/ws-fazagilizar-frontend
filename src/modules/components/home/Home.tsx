@@ -16,13 +16,13 @@ const Home:React.FC = () =>{
                 disabled={false}
                 />
 
-                <IonContent id="home">
+                <div id="home">
                     <Header name="Julia Costa"/>
 
                     <IonRouterOutlet>
                         <HomeRoutes />
                     </IonRouterOutlet>
-                </IonContent>
+                </div>
             </IonSplitPane>
         </IonPage>
     )

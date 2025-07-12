@@ -16,21 +16,22 @@ import DashHeader from "../../../../shared/components/dash-header/DashHeader"
 import { IBreadcrumbs } from "../../../interfaces/sidebar"
 
 const Dash: React.FC = () =>{
-    const breadcrumbs:Readonly<Partial<IBreadcrumbs>> = {
+    const breadcrumbs = ['Dashboard']
+    /*const breadcrumbs:Readonly<Partial<IBreadcrumbs>> = {
         breadcrumbs: [
             {
                 text: 'Dashboard',
                 route: '/home/dash'
             }
         ]
-    }
+    }*/
 
     return (
         <IonContent>
             <main>
                 <Bundle />
 
-                <DashHeader title="Dashboard" breadcrumbs={breadcrumbs.breadcrumbs}/>
+                <DashHeader title="Dashboard" breadcrumbs={breadcrumbs}/>
 
                 <section className="notifications">
                     <span>Receba push notificações de novos pedidos em seu dispositivo</span>

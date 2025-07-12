@@ -1,23 +1,23 @@
 import { Table, TableBody, TableCell, TableContainer, TableFooter, TableHead, TableRow } from '@mui/material'
 import DashHeader from '../../../../../shared/components/dash-header/DashHeader'
-import { IBreadcrumbs } from '../../../../interfaces/sidebar'
 import './users.scss'
 import { IonContent, IonAlert } from "@ionic/react"
 import DefaultButton from '../../../../../shared/components/default-button/DefaultButton'
 import { buttonColors } from '../../../../../shared/enums'
-import { informationCircleOutline, trashOutline } from 'ionicons/icons'
+import { trashOutline } from 'ionicons/icons'
 import DefaultTag from '../../../../../shared/components/default-tag/DefaultTag'
 
 const Users:React.FC = () =>{
-    const breadcrumbs:Readonly<Partial<IBreadcrumbs>> = {
+    const breadcrumbs = ['Dashboard', 'Gestor de Empresas', 'sapatariateste', 'Usuários']
+    /*const breadcrumbs:Readonly<Partial<IBreadcrumbs>> = {
         breadcrumbs: [
             {
                 text: 'Dashboard',
-                route: '/home/dash'
+                route: allMenu.find(x => x.title==='Dashboard')?.route
             },
             {
                 text: 'Gestor de Empresas',
-                route: '/home/my-store/branch-manager'
+                route: allMenu.find(x => x.title='Dashboard')?.route
             },
             {
                 text: 'sapatariateste',
@@ -28,12 +28,12 @@ const Users:React.FC = () =>{
                 route: '/home/my-store/users'
             },
         ]
-    }
+    }*/
 
     return (
         <IonContent>
             <main>
-                <DashHeader title='Usuários | SAPATARIA TESTE' breadcrumbs={breadcrumbs.breadcrumbs}/>
+                <DashHeader title='Usuários | SAPATARIA TESTE' breadcrumbs={breadcrumbs}/>
 
                 <TableContainer>
                     <Table sx={{ minWidth: 650 }} aria-label="simple table" className='default-container'>

@@ -21,6 +21,11 @@ main{
     }
 }
 
+.white-container{
+    @extend .default-container;
+    padding: 0;
+}
+
 .upper-text{
     text-transform: uppercase;
 }
@@ -47,4 +52,8 @@ main{
     background-color: whitesmoke;
     border-radius: 1rem;
     box-shadow: 0.3rem 0.3rem 5px gray;
+}
+
+.extra-padding{
+    padding: 0.6rem
 }

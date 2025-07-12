@@ -8,7 +8,8 @@ import { IonContent, IonSelect, IonSelectOption } from "@ionic/react"
 import { TableContainer, Table, TableHead, TableRow, TableCell, TableBody, TableFooter } from '@mui/material';
 
 const Emails:React.FC = () =>{
-    const breadcrumbs:Readonly<Partial<IBreadcrumbs>> = {
+    const breadcrumbs = ['Dashboard', 'Gestor de Empresas', 'Empresa', 'Grupo de E-mails']
+    /*const breadcrumbs:Readonly<Partial<IBreadcrumbs>> = {
         breadcrumbs: [
             {
                 text: 'Dashboard',
@@ -27,12 +28,12 @@ const Emails:React.FC = () =>{
                 route: '/home/my-store/email'
             }
         ]
-    }
+    }*/
 
     return (
         <IonContent>
             <main>
-                <DashHeader title='Gestor de Filial' breadcrumbs={breadcrumbs.breadcrumbs}/>
+                <DashHeader title='Gestor de Filial' breadcrumbs={breadcrumbs}/>
 
                 <div style={{'width':'100%', 'display':'inline-flex','justifyContent':'end'}}>
                     <DefaultButton text="voltar" icon={arrowBackOutline} backgroundColor={buttonColors.VERMELHO}/>

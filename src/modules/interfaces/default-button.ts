@@ -1,4 +1,4 @@
-import { IonButton } from "@ionic/react";
+import { IonButton, IonChip } from "@ionic/react";
 import { buttonColors } from "../../shared/enums";
 import type {ComponentProps} from 'react';
 
@@ -11,7 +11,7 @@ export interface IDefaultButton extends ComponentProps<typeof IonButton>{
     route?: string,
 }
 
-export interface IDefaultTag{
+export interface IDefaultTag extends ComponentProps<typeof IonChip>{
     text: string,
     backgroundColor: buttonColors;
 }

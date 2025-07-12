@@ -7,7 +7,8 @@ import { buttonColors } from "../../../../../shared/enums"
 import { addOutline, checkmarkOutline, cogOutline, removeOutline, trashOutline } from "ionicons/icons"
 
 const CounterSale:React.FC = () =>{
-    const breadcrumbs:Readonly<Partial<IBreadcrumbs>> = {
+    const breadcrumbs = ['Dashboard', 'Venda Balcão (PDV)'];
+    /*const breadcrumbs:Readonly<Partial<IBreadcrumbs>> = {
         breadcrumbs: [
             {
                 text: 'Dashboard',
@@ -18,12 +19,12 @@ const CounterSale:React.FC = () =>{
                 route: '/home/my-store/counter-sale'
             },
         ]
-    }
+    }*/
 
     return (
         <IonContent>
             <main>
-                <DashHeader title='Venda Balcão (PDV)' breadcrumbs={breadcrumbs.breadcrumbs}/>
+                <DashHeader title='Venda Balcão (PDV)' breadcrumbs={breadcrumbs}/>
 
                 <div style={{'width':'100%', 'display':'inline-flex','justifyContent':'end'}}>
                     <DefaultButton text="configurações pdv" icon={cogOutline} backgroundColor={buttonColors.AZUL}/>

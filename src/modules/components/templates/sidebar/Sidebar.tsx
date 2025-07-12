@@ -1,6 +1,6 @@
 import React, { ComponentProps, useState } from 'react';
 import './sidebar.scss';
-import { allMenu } from './sidebar-content';
+import { fullMenu } from './sidebar-content';
 import { IonContent, IonHeader, IonIcon, IonMenu, useIonRouter } from '@ionic/react';
 import { chevronUp,chevronDown } from 'ionicons/icons';
 import { IMenuItem } from '../../../interfaces/sidebar';
@@ -8,7 +8,7 @@ import { IMenuItem } from '../../../interfaces/sidebar';
 interface Props extends ComponentProps<typeof IonMenu>{};
 
 const Sidebar: React.FC<Props> = ({...rest}) => {
-    const [sideContent, setSideContent] = useState(allMenu);
+    const [sideContent, setSideContent] = useState(fullMenu);
     const router = useIonRouter();
 
     function setVisibility(title: string){

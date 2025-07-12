@@ -12,7 +12,8 @@ import { Table, TableBody, TableCell, TableContainer, TableFooter, TableHead, Ta
 import DefaultTag from '../../../../../shared/components/default-tag/DefaultTag';
 
 const BranchManager:React.FC = () =>{
-    const breadcrumbs:Readonly<Partial<IBreadcrumbs>> = {
+    const breadcrumbs = ['Dashboard', 'Gestor de Empresas']
+    /*const breadcrumbs:Readonly<Partial<IBreadcrumbs>> = {
         breadcrumbs: [
             {
                 text: 'Dashboard',
@@ -23,12 +24,12 @@ const BranchManager:React.FC = () =>{
                 route: '/home/my-store/branch-manager'
             },
         ]
-    }
+    }*/
     
     return (
         <IonContent>
             <main>
-                <DashHeader title='Gestor de Filial' breadcrumbs={breadcrumbs.breadcrumbs}/>
+                <DashHeader title='Gestor de Filial' breadcrumbs={breadcrumbs}/>
 
                 <form action="" method="get" className='white-container'>
                     <div className='grid-form extra-padding'>
@@ -170,7 +171,7 @@ const BranchManager:React.FC = () =>{
                                 </TableCell>
 
                                 <TableCell align='center'>
-                                    <span>sapatariateste</span>
+                                    <span>WELINTON DA SILVA</span>
 
                                     <DefaultTag text='comércio' backgroundColor={buttonColors.AZUL}/>
                                 </TableCell>

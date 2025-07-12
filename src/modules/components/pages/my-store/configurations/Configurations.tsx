@@ -16,7 +16,6 @@ import {
     serverOutline, 
     timeOutline 
 } from "ionicons/icons";
-import { useState } from "react";
 
 const ButtonConfig: React.FC<{id?:string, icon:string, title: string}> = ({id,icon, title}) =>{
     return (
@@ -43,7 +42,8 @@ const Configurations:React.FC = () =>{
         {id: "hover-configurations-discount", icon: pricetagOutline, title: "Configurações \n Desconto"},
     ]
 
-    const breadcrumbs:Readonly<Partial<IBreadcrumbs>> = {
+    const breadcrumbs = ['Dashboard', 'Gestor de Empresas', 'sapatariateste', 'Configurações']
+    /*const breadcrumbs:Readonly<Partial<IBreadcrumbs>> = {
         breadcrumbs: [
             {
                 text: 'Dashboard',
@@ -62,12 +62,12 @@ const Configurations:React.FC = () =>{
                 route: '/home/my-store/configurations'
             },
         ]
-    }
+    }*/
 
     return (
         <IonContent>
             <main>
-                <DashHeader title="Configurações | SAPATARIA TESTE" breadcrumbs={breadcrumbs.breadcrumbs}/>
+                <DashHeader title="Configurações | SAPATARIA TESTE" breadcrumbs={breadcrumbs}/>
 
                 <section className="grid-buttons">
                     {buttons.map(x=>(

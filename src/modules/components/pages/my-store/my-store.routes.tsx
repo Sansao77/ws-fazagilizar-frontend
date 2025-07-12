@@ -1,4 +1,4 @@
-import { Route } from "react-router"
+import { Redirect, Route } from "react-router"
 import Configurations from "./configurations/Configurations";
 import BranchManager from "./branch-manager/BranchManager";
 import CounterSale from "./counter-sale/CounterSale";
@@ -16,6 +16,10 @@ const MyStoreRoutes = () =>{
             <Route exact path='/home/my-store/users' component={Users} />
             <Route exact path='/home/my-store/email' component={Emails} />
             <Route exact path='/home/my-store/branch-manager/notifications' component={Notifications} />
+
+            <Route exact path='/home/my-store'>
+                <Redirect to='/home/my-store/configurations' />
+            </Route>
         </>
     )
 }
