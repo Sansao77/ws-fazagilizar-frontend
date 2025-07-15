@@ -1,0 +1,62 @@
+@use '/public/styles/styles.scss' as *;
+@use '/public/styles/variables.scss' as *;
+
+.order-filter-card {
+  background-color: #ffffff;
+  color: black;
+  padding: 1rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: auto;
+}
+
+.content-wrapper {
+  max-height: 1000px;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+
+  &.hidden {
+    max-height: 0;
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.rotate-0 {
+  transition: transform 0.3s ease;
+  transform: rotate(0deg);
+}
+
+.rotate-180 {
+  transition: transform 0.3s ease;
+  transform: rotate(180deg);
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0rem;
+  right: 1rem;
+  background-color: transparent;
+  color: black;
+  border-radius: 0px 0px 5px 5px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgb(116, 116, 116);
+  border-top: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+
+  &:hover {
+    background-color: #f0f0f0;
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}

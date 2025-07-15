@@ -1,0 +1,57 @@
+@use '/public/styles/styles.scss' as *;
+@use '/public/styles/variables.scss' as *;
+
+.order-filter-form {
+  font-family: Arial, sans-serif;
+  overflow: auto;
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    label {
+      font-weight: bold;
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    input,
+    select {
+      padding: 0.5rem;
+      background-color: white;
+      font-size: 0.9rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    select[multiple] {
+      height: 4.5rem;
+    }
+  }
+
+  .radio-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    label {
+      font-weight: normal;
+      margin-right: 1rem;
+
+      input {
+        margin-right: 0.25rem;
+      }
+    }
+  }
+}
+
+.buttons-filter-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
