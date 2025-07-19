@@ -78,7 +78,7 @@ export const fullMenu:IMenuItem[] = [
         children: [
             {
                 title: 'Pedidos',
-                route: '/404',
+                route: '/home/ordereds',
             },
             {
                 title: 'Cupons',
@@ -89,7 +89,16 @@ export const fullMenu:IMenuItem[] = [
     {
         title: 'Gestor de Produtos',
         icon: fileTrayFullOutline,
-        route: '/home/product-manager',
+        children: [
+            {
+                title: 'Produtos Principal',
+                route: '/home/product-manager',
+            },
+            {
+                title: 'Produtos Secundário',
+                route: '/home/productManager',
+            },
+        ]
     },
     {
         title: 'Gestor de Pessoas',
@@ -250,7 +259,7 @@ export const fullMenu:IMenuItem[] = [
         children: [
             {
                 title: 'Pagamento',
-                route: '/404',
+                route: '/home/payment-integration',
             },
             {
                 title: 'Estoque',
@@ -258,7 +267,7 @@ export const fullMenu:IMenuItem[] = [
             },
             {
                 title: 'Frete',
-                route: '/404',
+                route: '/home/shipping-config',
             },
         ]
     },
