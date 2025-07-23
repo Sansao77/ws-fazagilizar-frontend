@@ -1,6 +1,5 @@
-import { IonContent, IonIcon, IonItem, IonList, IonPopover } from "@ionic/react";
+import { IonContent, IonIcon, IonItem, IonPopover } from "@ionic/react";
 import DashHeader from "../../../../../shared/components/dash-header/DashHeader";
-import { IBreadcrumbs } from "../../../../interfaces/sidebar";
 import './configurations.scss'
 import { 
     barChartOutline, 
@@ -42,27 +41,7 @@ const Configurations:React.FC = () =>{
         {id: "hover-configurations-discount", icon: pricetagOutline, title: "Configurações \n Desconto"},
     ]
 
-    const breadcrumbs = ['Dashboard', 'Gestor de Empresas', 'sapatariateste', 'Configurações']
-    /*const breadcrumbs:Readonly<Partial<IBreadcrumbs>> = {
-        breadcrumbs: [
-            {
-                text: 'Dashboard',
-                route: '/home/dash'
-            },
-            {
-                text: 'Gestor de Empresas',
-                route: '/home/my-store/branch-manager'
-            },
-            {
-                text: 'sapatariateste',
-                route: '/404'
-            },
-            {
-                text: 'Configurações',
-                route: '/home/my-store/configurations'
-            },
-        ]
-    }*/
+    const breadcrumbs = ['Dashboard', 'Gestor de Empresas', 'sapatariateste', 'Configurações'];
 
     return (
         <IonContent>
